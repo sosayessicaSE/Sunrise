@@ -42,6 +42,10 @@ function App() {
             element={<Home isDarkMode={isDarkMode} toggleTheme={toggleTheme} />}
           />
           <Route
+            path="/Sunrise"
+            element={<Home isDarkMode={isDarkMode} toggleTheme={toggleTheme} />}
+          />
+          <Route
             path="/properties"
             element={
               <PropertyList isDarkMode={isDarkMode} toggleTheme={toggleTheme} />

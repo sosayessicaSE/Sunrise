@@ -29,7 +29,7 @@
     border-radius: 50%;
     position: absolute;
     top: 2px;
-    left: 2px;
+    left: 3px;
     transition: transform 0.3s;
   }
   
@@ -50,14 +50,12 @@
   }
   
   .light-icon {
-    left: 1px;
-    top: 13px;
+    top: 12px;
     opacity: 1;
   }
   
   .dark-icon {
-    right: 1px;
-    top: 13px;
+    top: 12px;
     opacity: 0;
   }
   
