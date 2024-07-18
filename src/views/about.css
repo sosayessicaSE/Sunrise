@@ -21,13 +21,20 @@ body, html {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto; 
   gap: 20px; 
   width: 100%;
   max-width: 1500px;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; 
+    padding: 50px;
+  }
 }
 
 .about {
@@ -37,15 +44,11 @@ body, html {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.8);
   border-radius: 8px;
   overflow: hidden;
+  padding: 20px;
 }
 
-
-#div1:hover {
+#div1:hover, #div2:hover {
   transform: translateY(-10px);
-}
-
-#div2:hover{
-  transform: translateY(10px);
 }
 
 .about.dark-theme {
@@ -54,6 +57,7 @@ body, html {
   transition: transform 0.3s, box-shadow 0.3s;
   color: rgb(250, 250, 250);
 }
+
 .about.light-theme {
   background-color: rgb(247, 247, 247);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -63,7 +67,7 @@ body, html {
 
 .about h1 {
   font-family: "Playfair Display", serif;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
@@ -81,11 +85,9 @@ body, html {
   background-color: #3a3a3a;
 }
 
-
-
 .about h2 {
   font-family: "Playfair Display", serif;
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-top: 30px;
 }
 
@@ -97,6 +99,7 @@ body, html {
   background: #4d4d4d;
   margin-top: 10px;
 }
+
 .about.dark-theme h2::after {
   background-color: #d1d1d1;
 }
@@ -104,13 +107,13 @@ body, html {
 .text {
   font-family: "Roboto", sans-serif;
   margin-bottom: 20px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .aboutext {
   text-align: center; 
   font-family: "Playfair Display", serif;
-  width: 60%;
+  width: 100%;
   margin: 0 auto; 
   display: flex;
   justify-content: center;
@@ -131,33 +134,36 @@ body, html {
   color: rgba(94, 94, 94, 0.8);
   background: none;
 }
+
 .text.dark-theme {
   color: rgba(165, 165, 165, 0.8);
 }
-
 
 .about h2::after {
   background-color: #494949;
 }
 
-.div1 {
-  justify-content: center;
-}
-
 @media (min-width: 768px) {
   .about {
-      padding: 60px 40px;
+    padding: 60px 40px;
   }
 
   .about h1 {
-      font-size: 3em;
+    font-size: 3em;
   }
 
   .about h2 {
-      font-size: 2em;
+    font-size: 2em;
   }
 
   .about p {
-      font-size: 1.2em;
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
   }
 }
